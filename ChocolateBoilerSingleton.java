@@ -51,10 +51,10 @@ public class ChocolateBoilerSingleton {
 }
 
 
-class ChocolateBoilerSingletonTest{
+class ChocolateBoilerSingletonTest extends Thread{
   ChocolateBoilerSingletonTest(){};
 
-  static public void test(){
+  public void run(){
     ChocolateBoilerSingleton x = ChocolateBoilerSingleton.getInstance();
     ChocolateBoilerSingleton y = ChocolateBoilerSingleton.getInstance();
 
@@ -73,6 +73,11 @@ class ChocolateBoilerSingletonTest{
 class Main {
   public static void main(String[] args) {
     System.out.println("ChocolateBoilerSingleton Test\n");
-    ChocolateBoilerSingletonTest.test();
+    ChocolateBoilerSingletonTest test1 = new ChocolateBoilerSingletonTest();
+    ChocolateBoilerSingletonTest test2 = new ChocolateBoilerSingletonTest();
+    ChocolateBoilerSingletonTest test3 = new ChocolateBoilerSingletonTest();
+    test1.start();
+    test2.start();
+    test3.start();
   }
 }
