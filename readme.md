@@ -56,4 +56,3 @@ javac ChocolateBoilerSingleton.java
 java Main
 
 ```
--  
