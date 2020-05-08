@@ -1,6 +1,6 @@
 public class ChocolateBoilerSingleton {
-    private boolean empty;
-    private boolean boiled;
+    private volatile boolean empty;
+    private volatile boolean boiled;
     private static ChocolateBoilerSingleton instance = null;
 
     private ChocolateBoilerSingleton() {
