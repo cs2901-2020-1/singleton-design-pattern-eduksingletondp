@@ -48,4 +48,12 @@ public void run(){
   }
 }
 ```
+
+## Compile and Run
+
+```
+javac ChocolateBoilerSingleton.java
+java Main
+
+```
 -  
