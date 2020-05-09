@@ -11,9 +11,10 @@ public class ChocolateBoilerSingleton {
     public static ChocolateBoilerSingleton getInstance(){
       if (instance == null){
         instance = new ChocolateBoilerSingleton();
-      }
+        }
       return instance;
-
+    }
+    
     public void fill(){
         if(isEmpty()){
             empty = false;
@@ -43,3 +44,17 @@ public class ChocolateBoilerSingleton {
         return boiled;
     }
 }
+
+class ChocolateBoilerSingletonTest{
+    ChocolateBoilerSingletonTest(){};
+    public void run(){
+      ChocolateBoilerSingleton x = ChocolateBoilerSingleton.getInstance();
+      ChocolateBoilerSingleton y = ChocolateBoilerSingleton.getInstance();
+      x.print();
+      y.print();
+      System.out.println("Filled x\n");
+      x.fill();
+      x.print();
+      y.print();
+    }
+  } 
