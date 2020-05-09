@@ -1,4 +1,4 @@
-class ChocolateBoilerSingleton {
+public class ChocolateBoilerSingleton {
     private static ChocolateBoilerSingleton instance = null;
     private boolean empty;
     private boolean boiled;
