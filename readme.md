@@ -1,3 +1,13 @@
+# EDUK
+
+|  **#** | **Código** | **Apellidos, Nombre** | **% Trabajo** |
+| :---: | :---: | :---: | :---: |
+|  1 | 201810424 | Württele Igari, Stephano | 100% |
+|  2 | 201720031 | Diaz Gardini, Andrea | 100% |
+|  3 | 201720057 | Cárcamo Rivera, Sebastián | 100% |
+|  4 | 201810614 | Villegas Suárez, Ariana | 100% |
+|  5 | 201710524 | Linares Trelles, Diego | 100% |
+
 # Singleton Design Pattern
 > The singleton is the simplest in terms of its class diagram; in fact, the diagram holds just a single class!
 
@@ -33,3 +43,12 @@ public class Singleton {
     }
     return instance;
 ```
+
+## Compile and Run
+
+```
+javac ChocolateBoilerSingleton.java
+java Main
+
+```
+
