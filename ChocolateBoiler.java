@@ -1,11 +1,18 @@
-public class ChocolateBoiler {
+public class ChocolateBoilerSingleton {
+    private static ChocolateBoilerSingleton instance = null;
     private boolean empty;
     private boolean boiled;
 
-    public ChocolateBoiler() {
+    public ChocolateBoilerSingleton() {
         empty = true;
         boiled = false;
     }
+
+    public static ChocolateBoilerSingleton getInstance(){
+      if (instance == null){
+        instance = new ChocolateBoilerSingleton();
+      }
+      return instance;
 
     public void fill(){
         if(isEmpty()){
