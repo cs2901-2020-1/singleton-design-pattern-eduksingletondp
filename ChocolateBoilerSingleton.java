@@ -3,7 +3,7 @@ public class ChocolateBoilerSingleton {
     private boolean empty;
     private boolean boiled;
 
-    public ChocolateBoilerSingleton() {
+    private ChocolateBoilerSingleton() {
         empty = true;
         boiled = false;
     }
