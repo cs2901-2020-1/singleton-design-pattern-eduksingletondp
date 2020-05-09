@@ -8,44 +8,50 @@ public class ChocolateBoilerSingleton {
         boiled = false;
     }
 
-    public static ChocolateBoilerSingleton getInstance(){
-      if (instance == null){
+    public static ChocolateBoilerSingleton getInstance() {
+      if (instance == null) {
         instance = new ChocolateBoilerSingleton();
         }
       return instance;
     }
     
-    public void fill(){
-        if(isEmpty()){
+    public void fill() {
+        if(isEmpty()) {
             empty = false;
             boiled = false;
         }
     }
 
-    public void drain(){
-        if(isEmpty() && isBoiled()){
+    public void drain() {
+        if(isEmpty() && isBoiled()) {
             //drain the boiled milk and chocolate
             empty = true;
         }
     }
 
-    public void boil(){
-        if(!isEmpty() && isBoiled()){
+    public void boil() {
+        if(!isEmpty() && isBoiled()) {
             //bring the contents to a boil
             boiled = true;
         }
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return empty;
     }
 
-    public boolean isBoiled(){
+    public boolean isBoiled() {
         return boiled;
+    }
+
+    public void print() {
+        System.out.println("Empty :" + empty);
+        System.out.println("Boiled :" + boiled);
+        System.out.println("\n");
     }
 }
 
-class ChocolateBoilerSingletonTest{
+class ChocolateBoilerSingletonTest extends Thread {
     ChocolateBoilerSingletonTest(){};
     public void run(){
       ChocolateBoilerSingleton x = ChocolateBoilerSingleton.getInstance();
