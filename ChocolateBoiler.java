@@ -58,3 +58,11 @@ class ChocolateBoilerSingletonTest{
       y.print();
     }
   } 
+
+class Main {
+  public static void main(String[] args) {
+    System.out.println("ChocolateBoilerSingleton Test\n");
+    ChocolateBoilerSingletonTest test1 = new ChocolateBoilerSingletonTest();
+    test1.run();
+  }
+}
